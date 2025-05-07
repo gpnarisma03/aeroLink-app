@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flight Booking</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/index.css" />
+
+  <style>
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg px-4">
+    <a class="navbar-brand fw-bold" href="#">Airline Booking App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center" href="#">
+            <i class="fas fa-user me-2"></i>Login
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <section id="banner">
+    <!-- Social Media Icons -->
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+
+    <div id="banner-content">
+      <h1>Explore the World with Us</h1>
+      <p class="lead">Find and book your next flight easily</p>
+    </div>
+    <!-- Flight Search Form -->
+<div class="flight-search bg-white text-dark p-4 rounded shadow">
+  <div class="d-flex align-items-center mb-3">
+    <div class="flight-icon-container">
+      <img class="flight-icon" src="./assets/icons/flight-icon.png">
+    </div>
+
+    <h5 class="m-0">Flight</h5>
+  </div>
+  <form class="row g-2">
+    <div class="col-md-3 destination-container">
+      <label for="from" class="form-label">From</label>
+      <select class="form-select destination-select" id="from">
+        <option selected disabled>Select origin</option>
+        <option>New York</option>
+        <option>London</option>
+        <option>Manila</option>
+      </select>
+    </div>
+    <div class="exchange-icon">
+      <img src="./assets/icons/exchange-icon.png" alt="Exchange" />
+    </div>
+    <div class="col-md-3 destination-container">
+      <label for="to" class="form-label">To</label>
+      <select class="form-select destination-select" id="to">
+        <option selected disabled>Select destination</option>
+        <option>Paris</option>
+        <option>Tokyo</option>
+        <option>Dubai</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-light w-100 d-flex justify-content-between align-items-center" type="button">
+        RoundTrip
+        <i class="fas fa-chevron-down"></i>
+      </button>
+    </div>
+    <div class="col-md-2">
+      <label for="depart" class="form-label">Depart</label>
+      <input type="date" class="form-control" id="depart">
+    </div>
+    <div class="col-md-2">
+      <label for="return" class="form-label">Return</label>
+      <input type="date" class="form-control" id="return">
+    </div>
+  </form>
+</div>
+
+  </section>
+
+  <!-- Main content -->
+  <main class="container my-5">
+    <section id="destinations" class="mb-5">
+      <!-- Popular Destinations -->
+    </section>
+
+    <section id="blogs" class="mb-5">
+      <!-- Blogs -->
+    </section>
+
+    <section id="reviews" class="mb-5">
+      <!-- Reviews -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="text-center py-4 bg-light">
+    &copy; 2025 Airline Booking App. All rights reserved.
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

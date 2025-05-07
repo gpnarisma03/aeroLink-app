@@ -1,0 +1,158 @@
+:root {
+    --primary-color: #1B4A77;
+    --secondary-color: #2F73B5;
+    --primary-text: #696969;
+    --secondary-text: #808080;
+  }
+  
+
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  #banner {
+    position: relative;
+    height: 650px;
+    background-image: url('../assets/images/section-image-1.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+  }
+
+  #banner h1 {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: transparent !important;
+    cursor: pointer;
+  }
+
+
+  .navbar .nav-link,
+  .navbar .navbar-brand {
+    color: white !important;
+  }
+
+  .navbar .nav-link:hover {
+    text-decoration: underline;
+    color: #f0f0f0 !important;
+  }
+
+  #banner-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  #banner h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+  }
+
+  #banner p {
+    font-size: 1.25rem;
+  }
+
+  .social-icons {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 2;
+    }
+
+  .social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+  }
+
+  .social-icons a:hover {
+  color: #ddd;
+  }
+  .flight-search {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1000px;
+  z-index: 2;
+  }
+
+  .flight-icon-container {
+    background-color: var(--primary-color);
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  .flight-icon {
+    height: 24px;
+  }
+  
+  select {
+    border: none!important;
+  }
+  
+
+  .destination-container {
+    position: relative;
+    border: 1px solid #DFDFDF;
+    border-radius: 5px;
+    height: 80px;
+  }
+
+  .destination-select {
+    appearance: none;     
+    -webkit-appearance: none; 
+    -moz-appearance: none;    
+    background: url('../assets/icons/location-icon.png') no-repeat left 20px center;
+    background-size: 30px;
+    padding-left: 50px;     
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    white-space: nowrap;    
+    overflow: hidden;         
+
+  }
+
+  .destination-container label {
+    color: var(--primary-text);
+  }
+
+  .destination-select {
+    color: var(--secondary-text)
+;
+  }
+  
+  .exchange-icon {
+    position: absolute;
+    top: 105px;
+    left: 244px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid #c7c7c7;
+    z-index: 1000;
+    background-color: white;
+
+  }
+  .exchange-icon img {
+    height: 24px;
+
+  }
+  
