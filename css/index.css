@@ -10,6 +10,11 @@
     font-family: 'Poppins', sans-serif;
   }
 
+  main section {
+    margin-top: 120px;
+    height: 30vh;
+  }
+
   #banner {
     position: relative;
     height: 650px;
@@ -32,6 +37,7 @@
     z-index: 10;
     background-color: transparent !important;
     cursor: pointer;
+    height: 70px;
   }
 
 
@@ -44,6 +50,12 @@
     text-decoration: underline;
     color: #f0f0f0 !important;
   }
+
+.logo-img {
+  height: 150px;
+  max-height: 100%;
+  object-fit: contain;
+}
 
   #banner-content {
     height: 100%;
@@ -417,7 +429,143 @@
 
 
 
+/* About Page */
+  #banner-about {
+    position: relative;
+    height: 300px;
+    background-image: url('../assets/images/section-image-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
 
+  } 
+#about {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: var(--primary-text);
+}
+
+#about h2 {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+#about p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+#about img {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#about img:hover {
+  transform: scale(1.03);
+}
+
+#about .text-primary {
+  color: var(--secondary-color) !important;
+}
+
+
+
+/* Flight Result PAge */
+
+#flight-result-banner {
+  position: relative;
+  height: 150px;
+  background-image: url('../assets/images/section-image-1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.flight-result-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.flight-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+}
+
+.airline-logo {
+  width: 70px;
+  height: auto;
+  margin-right: 15px;
+  object-fit: contain;
+}
+
+.flight-card > div.d-flex.align-items-center > div {
+  font-size: 1rem;
+}
+
+.flight-card .text-muted {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.flight-time {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #212529;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #0d6efd; /* Bootstrap primary color */
+  min-width: 80px;
+  text-align: right;
+}
+
+.flight-card .btn-primary {
+  background-color: #0d6efd;
+  border: none;
+  padding: 8px 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.flight-card .btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+.flight-card .text-center {
+  min-width: 75px;
+  font-size: 0.95rem;
+}
+
+
+/* Footer */
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+}
 
   /* Make From/To stack vertically on small screens */
 @media (max-width: 767.98px) {
@@ -440,6 +588,29 @@
 
 .departure-wrapper .departure-container {
   width: 100%;
+}
+
+
+
+
+/*Fligh result */
+
+@media (max-width: 767.98px) {
+  .flight-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .flight-card .text-center {
+    min-width: auto;
+    margin: 8px 0;
+  }
+  .price {
+    text-align: left;
+    margin: 8px 0;
+  }
+  .flight-card .btn-primary {
+    width: 100%;
+  }
 }
 
 }
