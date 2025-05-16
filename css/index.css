@@ -110,25 +110,27 @@
   }
   
 
-  .destination-container {
+  .destination-container{
     position: relative;
-    border: 1px solid #DFDFDF;
-    border-radius: 5px;
-    height: 80px;
+    border-radius: 2px;
   }
 
   .destination-select {
-    appearance: none;     
-    -webkit-appearance: none; 
-    -moz-appearance: none;    
     background: url('../assets/icons/location-icon.png') no-repeat left 20px center;
-    background-size: 30px;
+    background-size: 20px;
     padding-left: 50px;     
+    padding-top: 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     white-space: nowrap;    
     overflow: hidden;         
 
+  }
+
+  .from-container, .to-container, .departure-container {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
   }
 
   .destination-container label {
@@ -141,18 +143,303 @@
   }
   
   .exchange-icon {
-    position: absolute;
-    top: 105px;
-    left: 244px;
     width: 30px;
     border-radius: 50%;
     border: 1px solid #c7c7c7;
     z-index: 1000;
     background-color: white;
+    position: absolute;
+    top: 50%;
+    right: 48%;
 
   }
   .exchange-icon img {
     height: 24px;
 
   }
-  
+
+/* Remove border and shadow from date input */
+#depart, #return {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent; /* keep background clean */
+  color: var(--secondary-text);
+}
+
+#depart::placeholder, #return::placeholder {
+  color: var(--secondary-text);
+  opacity: 1;
+}
+
+.departure-container .form-label {
+  color: var(--primary-text);
+}
+
+
+.search-button {
+  background-color: var(--primary-color);
+  color: white;
+  transition: background-color 0.3s ease; 
+  font-weight: 600;
+}
+
+.search-button:hover {
+  background-color: darken(var(--primary-color), 10%);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+
+
+
+/* Login PAGE */
+
+  #login-page {
+    position: relative;
+    height: 100vh;
+    background-image: url('../assets/images/section-image-1.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .login-container {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-form {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+  }
+
+   .login-form h2 {
+    color: var(--primary-color);
+    font-size: 26px;
+    text-align: center;
+    font-weight: 600;
+   }
+
+
+ .sign-in-span {
+  color: var(--primary-text);
+  font-weight: 600;
+  text-align: center;
+ }
+
+  .login-form hr {
+  color: var(--secondary-text);
+ }
+
+
+ .google-sign {
+    border: 1px solid var(--secondary-color);
+    padding: 2px;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1); /* Example inner shadow */
+ }
+
+.or-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.or-divider hr {
+  flex: 1;
+  border: none;
+  height: 1px;
+  background-color: var(--secondary-text);
+}
+
+.or-divider span {
+  padding: 0 10px;
+  color: var(--secondary-text);
+
+}
+ .sign-in-google {
+  color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
+ }
+
+.login-input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.login-input-group input {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.login-input-group label {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.login-input {
+    border: 1px solid var(--secondary-color);
+    padding: 2px;
+    border-radius: 10px;
+}
+
+
+.login-button .btn-login{
+    padding: 5px 40px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    border-radius: 20px;
+      transition: color 0.3s;
+    
+    
+}
+
+.login-button .btn-login:hover{
+    padding: 5px 40px;
+   background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    
+}
+
+
+.forgot-password {
+  text-decoration: underline;
+  color: var(--secondary-text);
+  cursor: pointer;
+
+}
+
+
+
+
+/* Registration Page  */
+
+  #registration-page {
+    position: relative;
+    height: 100vh;
+    background-image: url('../assets/images/section-image-1.png');
+    background-size: cover;
+    background-position: center;
+  }
+ .registration-container {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .registration-form {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+  }
+
+   .registration-form h2 {
+    color: var(--primary-color);
+    font-size: 26px;
+    text-align: center;
+    font-weight: 600;
+   }
+
+.password-requirement span {
+  color: var(--primary-text);
+}
+.password-requirement ul li {
+  font-size: 14px;
+  list-style-type: disc;
+  color: var(--secondary-text);
+}
+
+.terms-and-conditions label {
+  font-size: 12px;
+  color: var(--primary-text);
+}
+.terms-and-conditions span {
+  color: var(--secondary-color);
+}
+
+.register-input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.register-input-group input {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.register-input-group label {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.register-input {
+    border: 1px solid var(--secondary-color);
+    padding: 2px;
+    border-radius: 10px;
+}
+
+
+.register-button .btn-register{
+    padding: 5px 40px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    border-radius: 20px;
+      transition: color 0.3s;
+    
+    
+}
+
+.register-button .btn-register:hover{
+    padding: 5px 40px;
+   background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    
+}
+
+
+
+
+
+  /* Make From/To stack vertically on small screens */
+@media (max-width: 767.98px) {
+  .destination-container, .departure-wrapper {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 5px;
+  }
+
+ .destination-container.from-container,
+  .destination-container .to-containerm {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .departure-wrapper {
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  gap: 1rem; /* optional spacing between containers */
+}
+
+.departure-wrapper .departure-container {
+  width: 100%;
+}
+
+}

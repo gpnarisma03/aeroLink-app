@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flight Booking</title>
+  <title>AeroLink</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,37 +13,39 @@
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  
+
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/index.css" />
 
-  <style>
-
-
-
-  </style>
 </head>
 <body>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg px-4">
-    <a class="navbar-brand fw-bold" href="#">Airline Booking App</a>
+    <a class="navbar-brand fw-bold" href="#">AeroLink</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Home</a>
+          <a class="nav-link active" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+          <a class="nav-link" href="about.html">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link d-flex align-items-center" href="#">
+          <a class="nav-link d-flex align-items-center" href="login.html">
             <i class="fas fa-user me-2"></i>Login
           </a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="register.html">Register</a>
         </li>
       </ul>
     </div>
@@ -62,53 +64,82 @@
       <h1>Explore the World with Us</h1>
       <p class="lead">Find and book your next flight easily</p>
     </div>
-    <!-- Flight Search Form -->
+<!-- Flight Search Form -->
 <div class="flight-search bg-white text-dark p-4 rounded shadow">
-  <div class="d-flex align-items-center mb-3">
-    <div class="flight-icon-container">
-      <img class="flight-icon" src="./assets/icons/flight-icon.png">
+  
+  <!-- First Row: Flight icon + title and RoundTrip button -->
+  <div class="row align-items-center mb-3">
+    <div class="col-md-6 d-flex align-items-center mb-2 mb-md-0">
+      <div class="flight-icon-container me-2">
+        <img class="flight-icon" src="./assets/icons/flight-icon.png" alt="Flight Icon" />
+      </div>
+      <h5 class="m-0" style="color: var(--primary-color);">Flight</h5>
     </div>
-
-    <h5 class="m-0">Flight</h5>
-  </div>
-  <form class="row g-2">
-    <div class="col-md-3 destination-container">
-      <label for="from" class="form-label">From</label>
-      <select class="form-select destination-select" id="from">
-        <option selected disabled>Select origin</option>
-        <option>New York</option>
-        <option>London</option>
-        <option>Manila</option>
-      </select>
-    </div>
-    <div class="exchange-icon">
-      <img src="./assets/icons/exchange-icon.png" alt="Exchange" />
-    </div>
-    <div class="col-md-3 destination-container">
-      <label for="to" class="form-label">To</label>
-      <select class="form-select destination-select" id="to">
-        <option selected disabled>Select destination</option>
-        <option>Paris</option>
-        <option>Tokyo</option>
-        <option>Dubai</option>
-      </select>
-    </div>
-    <div class="col-md-2">
-      <button class="btn btn-light w-100 d-flex justify-content-between align-items-center" type="button">
-        RoundTrip
-        <i class="fas fa-chevron-down"></i>
+    <div class="col-md-6 d-flex justify-content-start">
+      <button class="btn btn-light d-flex align-items-center text-muted" type="button">
+        RoundTrip <img src="./assets/icons/arrow-drop-down.png">
       </button>
     </div>
-    <div class="col-md-2">
-      <label for="depart" class="form-label">Depart</label>
-      <input type="date" class="form-control" id="depart">
+  </div>
+  
+  <form class="row g-3 align-items-center">
+
+    <div class="col-12 col-md-5 d-flex justify-content-center align-items-center mb-3 mb-md-0 destination-container">
+      <div class="from-container">
+        <label for="from" class="form-label">From</label>
+        <select class="form-select destination-select" id="from">
+          <option selected disabled> origin</option>
+          <option>New York</option>
+          <option>London</option>
+          <option>Manila</option>
+        </select>
+      </div>
+      <div class="d-none d-md-flex align-items-center justify-content-center exchange-icon">
+        <img src="./assets/icons/exchange-icon.png" alt="Exchange" style="height: 20px;">
+      </div>
+      <div class="to-container">
+        <label for="to" class="form-label">To</label>
+        <select class="form-select destination-select" id="to">
+          <option selected disabled>destination</option>
+          <option>Paris</option>
+          <option>Tokyo</option>
+          <option>Dubai</option>
+        </select>
+      </div>
     </div>
-    <div class="col-md-2">
-      <label for="return" class="form-label">Return</label>
-      <input type="date" class="form-control" id="return">
+<div class="col-12 col-md-5 d-flex justify-content-center align-items-center mb-3 mb-md-0 departure-wrapper">
+  
+  <!-- Depart with icon -->
+  <div class="col-6 px-2 departure-container">
+    <label for="depart" class="form-label">Depart</label>
+    <div class="input-group">
+      <span>
+        <img src="./assets/icons/calendar.png" alt="Calendar" style="height: 20px; width: 20px;">
+      </span>
+      <input type="text" class="form-control border-start-0" placeholder="Departing on" id="depart">
+    </div>
+  </div>
+
+  <!-- Return with icon -->
+  <div class="col-6 px-2 departure-container">
+    <label for="return" class="form-label">Return</label>
+    <div class="input-group">
+      <span>
+        <img src="./assets/icons/calendar.png" alt="Calendar" style="height: 20px; width: 20px;">
+      </span>
+      <input type="text" class="form-control border-start-0" placeholder="Returning on" id="return">
+    </div>
+  </div>
+
+</div>
+    <div class="col-12 col-md-2 d-flex justify-content-center align-items-center">
+      <a href="results.html" class="btn w-100 search-button" role="button">Search Flights</a>
     </div>
   </form>
+
 </div>
+
+
 
   </section>
 
@@ -129,10 +160,22 @@
 
   <!-- Footer -->
   <footer id="footer" class="text-center py-4 bg-light">
-    &copy; 2025 Airline Booking App. All rights reserved.
+    &copy; 2025 AeroLink Booking App. All rights reserved.
   </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <!-- Flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+  flatpickr("#depart", {
+    dateFormat: "m/d/Y",
+    allowInput: true
+  });
+  flatpickr("#return", {
+    dateFormat: "m/d/Y",
+    allowInput: true
+  });
+</script>
 </body>
 </html>
