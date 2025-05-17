@@ -27,7 +27,7 @@
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg px-4">
-<a class="navbar-brand d-flex align-items-center" href="#">
+<a class="navbar-brand d-flex align-items-center" href="index.html">
   <img src="assets/images/aeroLink-logo.png" alt="AeroLink Logo" class="logo-img">
 </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -146,22 +146,157 @@
   </section>
 
   <!-- Main content -->
-  <main class="container mt-5">
-    <section id="destinations" class="mb-5">
-      <!-- Popular Destinations -->
+<main class="main-section" id="main-section">
+<section id="destinations" class="mb-5">
+  <h2 class="mb-4">Popular Destinations</h2>
+  <h4 class="mb-3">Domestic</h3>
 
-      <h1>POPULAR DESTINATION HERE</h1>
-    </section>
+  <div class="destinations-container">
+    <div class="destination-card">
+      <img src="./assets/images/boracay-image.png" alt="Destination 1" />
+      <div class="destination-name">Boracay</div>
+    </div>
+    <div class="destination-card">
+      <img src="./assets/images/palawan-image.png" alt="Destination 2" />
+      <div class="destination-name">Palawan</div>
+    </div>
+    <div class="destination-card">
+      <img src="./assets/images/siargao-image.png" alt="Destination 3" />
+      <div class="destination-name">Siargao</div>
+    </div>
+  </div>
+  <div class="mt-5 d-flex justify-content-center align-items-center">
+    <button>See more</butotn>
+  </div>
 
-    <section id="blogs" class="mb-5">
-      <!-- Blogs -->
-         <h1>BLOGS HERE</h1>
-    </section>
+  <h4 class="mb-3 m-5">International</h3>
 
-    <section id="reviews" class="mb-5">
-      <!-- Reviews -->
-         <h1>REVIEWS HERE</h1>
-    </section>
+  <div class="destinations-container">
+    <div class="destination-card">
+      <img src="./assets/images/Japan_img.png" alt="Destination 1" />
+      <div class="destination-name">Japan</div>
+    </div>
+    <div class="destination-card">
+      <img src="./assets/images/Disneyland_img.png" alt="Destination 2" />
+      <div class="destination-name">Disneyland</div>
+    </div>
+    <div class="destination-card">
+      <img src="./assets/images/Thai_img.png" alt="Destination 3" />
+      <div class="destination-name">Thailand</div>
+    </div>
+  </div>
+  <div class="mt-5 d-flex justify-content-center align-items-center">
+    <button>See more</butotn>
+  </div>
+</section>
+
+<section id="blogs" class="mb-5">
+  <div class="container">
+    <!-- Row 1 -->
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
+      <h5 class="mb-2 header">Explore unique <span>places to stay</span></h5>
+      <a href="#" class="view-all ms-auto">All <span>&rarr;</span></a>
+    </div>
+
+    <!-- Row 2: Blog Cards -->
+    <div class="blog-cards">
+      <div class="blog-card">
+        <img src="./assets/images/blog1-img.png" alt="Blog 1">
+        <div class="blog-content">
+          <h5>Stay among the atolls in <span>Maldives</span></h5>
+          <p>From the 2nd century AD, the islands were known as the 'Money Isles' due to the abundance of cowry shells, a currency of the early ages.</p>
+        </div>
+      </div>
+      <div class="blog-card">
+        <img src="./assets/images/blog2-img.png" alt="Blog 2">
+        <div class="blog-content">
+          <h5>Experience the Ourika Valley in <span>Morocco</span></h5>
+          <p>Morocco’s Hispano-Moorish architecture blends influences from Berber culture, Spain, and contemporary artistic currents in the Middle East.</p>
+        </div>
+      </div>
+      <div class="blog-card">
+        <img src="./assets/images/blog3-img.png" alt="Blog 3">
+        <div class="blog-content">
+          <h5>Live traditionally in <span>Mongolia</span></h5>
+          <p>Traditional Mongolian yurts consists of an angled latticework of wood or bamboo for walls, ribs, and a wheel.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="mb-5">
+  <div class="container">
+    <!-- Title -->
+    <h5 class="review-title mb-4 text-center">What Our Travelers Say</h5>
+
+    <!-- Review Cards -->
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="review-card h-100 p-3">
+          <div class="d-flex align-items-center mb-2">
+            <img src="./assets/images/avatar1.png" alt="Reviewer 1" class="review-img me-3">
+            <div>
+              <h6 class="mb-0 review-name">Yifei Chen</h6>
+              <small class="text-muted">Seoul, South Korea | April 2019</small>
+            <div class="stars mb-2">★★★★★</div>
+            </div>
+          </div>
+
+          <p class="review-text">
+            What a great experience using Flynow! I booked all of my flights for my gap year through Flynow and never had any issues. When I had to cancel a flight because of an emergency, Flynow support helped me
+            <span class="read-more">read more...</span>
+          </p>
+        </div>
+      </div>
+
+            <div class="col-md-4">
+        <div class="review-card h-100 p-3">
+          <div class="d-flex align-items-center mb-2">
+            <img src="./assets/images/avatar2.png" alt="Reviewer 1" class="review-img me-3">
+            <div>
+              <h6 class="mb-0">Kaori Yamaguchi</h6>
+              <small class="text-muted">Honolulu, Hawaii | February 2017</small>
+            <div class="stars mb-2">★★★★★</div>
+            </div>
+          </div>
+
+          <p class="review-text">
+            My family and I visit Hawaii every year, and we usually book our flights using other services. Flynow was recommened to us by a long time friend, and I’m so glad we tried it out! The process was easy and
+            <span class="read-more">read more...</span>
+          </p>
+        </div>
+      </div>
+
+            <div class="col-md-4">
+        <div class="review-card h-100 p-3">
+          <div class="d-flex align-items-center mb-2">
+            <img src="./assets/images/avatar3.png" alt="Reviewer 1" class="review-img me-3">
+            <div>
+              <h6 class="mb-0">Anthony Lewis</h6>
+              <small class="text-muted">Berlin, Germany | April 2019</small>
+            <div class="stars mb-2">★★★★★</div>
+            </div>
+          </div>
+
+          <p class="review-text">
+           When I was looking to book my flight to Berlin from LAX, Flynow had the best browsing experiece so I figured I’d give it a try. It was my first time using Flynow, but I’d definitely recommend it to a friend and use it for
+            <span class="read-more">read more...</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Show More -->
+    <div class="text-center mt-4">
+      <a href="#" class="show-more-reviews">Show More Reviews</a>
+    </div>
+  </div>
+</section>
+
+
   </main>
 
   <!-- Footer -->

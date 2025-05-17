@@ -3,6 +3,11 @@
     --secondary-color: #2F73B5;
     --primary-text: #696969;
     --secondary-text: #808080;
+
+      --button-bg: var(--secondary-color);
+  --button-hover-bg: #235a8c;
+  --card-bg: #f9faff;
+  --card-border: #d1d9e6;
   }
   
 
@@ -10,11 +15,7 @@
     font-family: 'Poppins', sans-serif;
   }
 
-  main section {
-    margin-top: 120px;
-    height: 30vh;
-  }
-
+ 
   #banner {
     position: relative;
     height: 650px;
@@ -333,6 +334,245 @@
 }
 
 
+#email:focus, #password:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* Popular Destinations - Domestic */
+
+#main-section {
+
+  margin-top: 120px;
+}
+ #destinations {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+
+  #destinations button {
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: 17px;
+    color: white;
+    padding: 7px 20px;
+    transition: 0.3s ease;
+
+  }
+
+    #destinations button:hover {
+    border: 1px solid var(--primary-color);
+    background-color: white;
+    color: var(--primary-color);
+    font-weight: 600;
+
+  }
+
+
+
+  #destinations h2, h4 {
+    color: var(--primary-color);
+    text-align: center;
+  }
+
+  .destinations-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .destination-card {
+    position: relative;
+    flex: 1 1 calc(33.333% - 13.33px); /* roughly 3 cards per row with gap */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .destination-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .destination-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .destination-name {
+    position: absolute;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: white;
+    bottom: 10px;
+    left: 12px;
+  }
+
+
+
+  /* Blogs section */
+ #blogs {
+  padding: 0 15px;
+}
+
+#blogs .header {
+  color: var(--primary-text);
+}
+
+#blogs .header span {
+  color: #22C3A6;
+}
+
+.view-all {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.view-all:hover {
+  color: var(--secondary-color);
+}
+
+.blog-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog-card {
+  flex: 1 1 calc(33.333% - 13.33px);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #fff;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-content p {
+  color: var(--secondary-text);
+  font-size: 12px;
+}
+
+.blog-card h5 {
+  color: var(--primary-text);
+  font-size: 16px;
+}
+
+.blog-card h5 span {
+  color: var(--primary-text);
+    color: #22C3A6;
+}
+
+
+
+/* REVIEW SECTION */
+
+#reviews {
+  padding: 0 15px;
+}
+
+
+.review-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.review-card {
+  flex: 1 1 calc(33.333% - 13.33px);
+  background: transparent; 
+  padding: 10px;
+  min-height: 250px;
+}
+
+.review-title {
+  color: var(--primary-color);
+}
+
+.review-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.review-card .review-name {
+  font-size: 16px;
+  color: var(--primary-text);
+}
+
+.review-card .location {
+  font-size: 0.875rem;
+  color: var(--secondary-text);
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.review-card .review-text {
+  color: var(--primary-text);
+  font-size: 14px;
+}
+.review-card .read-more {
+  color: #605DEC;
+}
+
+.stars {
+  color: #605DEC;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+
+
+.show-more-reviews {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  border: 1px solid var(--primary-color);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  padding: 5px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.show-more-reviews:hover {
+  border-color: var(--secondary-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
 
 /* Registration Page  */
@@ -560,6 +800,136 @@
 }
 
 
+
+
+/* Flight Result */
+ .flight-result-container {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--primary-text);
+  }
+
+  .flight-result-container h2 {
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+
+ .flight-result-container {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--primary-text);
+  }
+
+  .flight-result-container h2 {
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+
+  /* Filter bar styles */
+  .filter-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  .filter-bar label {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-right: 8px;
+    display: block;
+  }
+
+  .filter-bar input[type="text"],
+  .filter-bar input[type="number"],
+  .filter-bar select {
+    padding: 6px 10px;
+    border: 1px solid var(--card-border);
+    border-radius: 5px;
+    font-size: 1rem;
+    min-width: 120px;
+  }
+
+  /* Flight card and other styles same as before */
+
+  .flight-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(27, 74, 119, 0.15);
+    transition: box-shadow 0.3s ease;
+    display: flex; /* important for showing/hiding */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flight-card:hover {
+    box-shadow: 0 4px 12px rgba(27, 74, 119, 0.3);
+  }
+
+  .flight-card > div {
+    flex: 1;
+  }
+
+  .airline-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+  }
+
+  .flight-card .d-flex.align-items-center {
+    flex: 2;
+  }
+
+  .flight-time {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+  }
+
+  .text-muted {
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+  }
+
+  .price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    min-width: 80px;
+    text-align: center;
+  }
+
+  .custom-book-button {
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .custom-book-button:hover {
+    background-color: var(--button-hover-bg);
+  }
+
+  .flight-card .text-center {
+    min-width: 70px;
+    font-size: 0.95rem;
+  }
+
+  .flight-card i.fas.fa-plane {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+  }
 /* Footer */
 
 footer {
@@ -590,12 +960,15 @@ footer {
   width: 100%;
 }
 
+    .destinations-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .destination-card {
+      flex: none;
+      width: 100%;
+    }
 
-
-
-/*Fligh result */
-
-@media (max-width: 767.98px) {
   .flight-card {
     flex-direction: column;
     align-items: flex-start;
@@ -611,6 +984,12 @@ footer {
   .flight-card .btn-primary {
     width: 100%;
   }
-}
+    .blog-cards {
+      flex-direction: column;
+    }
 
+    .blog-card {
+      flex: none;
+      width: 100%;
+    }
 }
