@@ -22,6 +22,19 @@ app.use(cors({
     optionsSuccessStatus: 200
   }));
 
+
+  const userRouter = require('./routes/userRoutes');
+  const airlineRouter = require ('./routes/airlineRoutes');
+  const flightRouter = require('./routes/flightRoutes');
+  const bookingRoutes = require('./routes/bookingRoutes');
+
+
+
+  app.use('/users', userRouter);
+  app.use('/airlines', airlineRouter);
+  app.use('/flights', flightRouter);
+  app.use('/bookings', bookingRoutes);
+
   if (require.main === module) {
      app.listen(port, () => console.log(`API is now online on port ${port}`));
   }
