@@ -25,33 +25,40 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg px-4">
-<a class="navbar-brand d-flex align-items-center" href="index.html">
-  <img src="assets/images/aeroLink-logo.png" alt="AeroLink Logo" class="logo-img">
-</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link d-flex align-items-center" href="login.html">
-            <i class="fas fa-user me-2"></i>Login
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg px-3 py-2 custom-navbar">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <h1 class="m-0">AeroLink</h1>
           </a>
-        </li>
-          <li class="nav-item">
-          <a class="nav-link" href="register.html">Register</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+
+          <!-- Toggler -->
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars text-white fs-3"></i>
+          </button>
+
+          <!-- Collapsible Content -->
+          <div class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="navbarNav">
+            <ul class="navbar-nav ms-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">
+                  <i class="fas fa-user me-2"></i>Login
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link register-link" href="register.html">
+                  <i class="fas fa-user-plus me-1"></i> Register
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
 
   <!-- Banner -->
   <section id="banner">
@@ -88,9 +95,9 @@
 
     <div class="col-12 col-md-5 d-flex justify-content-center align-items-center mb-3 mb-md-0 destination-container">
       <div class="from-container">
-        <label for="from" class="form-label">From</label>
+        <label for="from" class="form-label m-0">From</label>
         <select class="form-select destination-select" id="from">
-          <option selected disabled> origin</option>
+          <option selected disabled> Select origin</option>
           <option>New York</option>
           <option>London</option>
           <option>Manila</option>
@@ -100,9 +107,9 @@
         <img src="./assets/icons/exchange-icon.png" alt="Exchange" style="height: 20px;">
       </div>
       <div class="to-container">
-        <label for="to" class="form-label">To</label>
+        <label for="to" class="form-label m-0">To</label>
         <select class="form-select destination-select" id="to">
-          <option selected disabled>destination</option>
+          <option selected disabled>Select destination</option>
           <option>Paris</option>
           <option>Tokyo</option>
           <option>Dubai</option>
@@ -113,23 +120,23 @@
   
   <!-- Depart with icon -->
   <div class="col-6 px-2 departure-container">
-    <label for="depart" class="form-label">Depart</label>
+    <label for="depart" class="form-label m-0">Depart</label>
     <div class="input-group">
-      <span>
+       <span class="input-group-text no-style-group-text">
         <img src="./assets/icons/calendar.png" alt="Calendar" style="height: 20px; width: 20px;">
       </span>
-      <input type="text" class="form-control border-start-0" placeholder="Departing on" id="depart">
+      <input type="text" class="form-control departure-input" placeholder="Departing on" id="depart">
     </div>
   </div>
 
   <!-- Return with icon -->
   <div class="col-6 px-2 departure-container">
-    <label for="return" class="form-label">Return</label>
+    <label for="return" class="form-label m-0">Return</label>
     <div class="input-group">
-      <span>
+      <span class="input-group-text no-style-group-text">
         <img src="./assets/icons/calendar.png" alt="Calendar" style="height: 20px; width: 20px;">
       </span>
-      <input type="text" class="form-control border-start-0" placeholder="Returning on" id="return">
+      <input type="text" class="form-control departure-input border-start-0" placeholder="Returning on" id="return">
     </div>
   </div>
 

@@ -23,6 +23,7 @@
     background-size: cover;
     background-position: center;
     color: white;
+      z-index: 1;
 
   }
 
@@ -30,16 +31,21 @@
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
   }
 
-  .navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    background-color: transparent !important;
-    cursor: pointer;
-    height: 70px;
+  .navbar-brand h1 {
+    font-size: 34px;
+    font-weight: 700;
   }
+
+.navbar.custom-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: transparent !important;
+  height: 70px;
+}
+
 
 
   .navbar .nav-link,
@@ -52,11 +58,36 @@
     color: #f0f0f0 !important;
   }
 
-.logo-img {
-  height: 150px;
-  max-height: 100%;
-  object-fit: contain;
+.custom-navbar .nav-link {
+  color: #fff;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
 }
+
+.custom-navbar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.custom-navbar .register-link {
+  font-weight: bold;
+  color: #ffc107; /* Highlight register */
+}
+
+.navbar-toggler {
+  outline: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.collapsing {
+  transition: none !important;
+  display: none !important;
+}
+
+
+/* Banner */
 
   #banner-content {
     height: 100%;
@@ -98,64 +129,76 @@
   .social-icons a:hover {
   color: #ddd;
   }
+
+
+  /* Flight Search */
+
   .flight-search {
   position: absolute;
   bottom: -60px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  max-width: 1000px;
-  z-index: 2;
-  }
+  width: 100%;
+  max-width: 1200px;
+  z-index: 1; 
 
+  }
   .flight-icon-container {
     background-color: var(--primary-color);
     padding: 8px;
     border-radius: 50%;
     margin-right: 5px;
   }
-  .flight-icon {
+
+    .flight-icon {
     height: 24px;
   }
-  
-  select {
+
+select {
     border: none!important;
   }
   
+  .departure-input {
+    border: none !important;
+    box-shadow: none !important;
+  }
+.no-style-group-text {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important; /* Optional: remove extra padding */
+}
 
   .destination-container{
     position: relative;
     border-radius: 2px;
   }
-
-  .destination-select {
-    background: url('../assets/icons/location-icon.png') no-repeat left 20px center;
-    background-size: 20px;
-    padding-left: 50px;     
-    padding-top: 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    white-space: nowrap;    
-    overflow: hidden;         
-
-  }
+.destination-select {
+  background: url('../assets/icons/location-icon.png') no-repeat left 20px center;
+  background-size: 20px;
+  padding-left: 50px;
+  padding-top: 10px;       /* adjust as needed */
+  padding-bottom: 10px;    /* adjust as needed */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none;        /* remove browser default arrow (optional) */
+  background-position: 20px center;
+}
 
   .from-container, .to-container, .departure-container {
     border: 1px solid #ccc;
     padding: 5px;
     border-radius: 5px;
+    padding: 5px;
+    height: 80px;
   }
-
   .destination-container label {
     color: var(--primary-text);
   }
 
   .destination-select {
-    color: var(--secondary-text)
-;
+    color: var(--secondary-text);
   }
-  
-  .exchange-icon {
+    .exchange-icon {
     width: 30px;
     border-radius: 50%;
     border: 1px solid #c7c7c7;
@@ -163,14 +206,13 @@
     background-color: white;
     position: absolute;
     top: 50%;
-    right: 48%;
+    right: 52%;
 
   }
   .exchange-icon img {
     height: 24px;
 
   }
-
 /* Remove border and shadow from date input */
 #depart, #return {
   border: none !important;
@@ -203,8 +245,6 @@
 }
 
 
-
-
 /* Login PAGE */
 
   #login-page {
@@ -229,6 +269,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     width: 100%;
     max-width: 400px;
+    margin-top: 80px;
   }
 
    .login-form h2 {
@@ -280,6 +321,7 @@
   color: var(--primary-color);
   text-decoration: underline;
   cursor: pointer;
+  font-size: 16px;
  }
 
 .login-input-group {
@@ -296,6 +338,7 @@
 .login-input-group label {
   color: var(--primary-color);
   font-weight: 600;
+  font-size: 16px;
 }
 
 .login-input {
@@ -337,6 +380,10 @@
 #email:focus, #password:focus {
   outline: none;
   box-shadow: none;
+}
+#password::placeholder, #email::placeholder, #firstname::placeholder, #lastname::placeholder {
+  font-size: 16px; 
+  color: #888;        
 }
 
 
@@ -598,6 +645,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     width: 100%;
     max-width: 400px;
+    margin-top: 10px;
   }
 
    .registration-form h2 {
@@ -654,7 +702,8 @@
     font-size: 18px;
     font-weight: 300;
     border-radius: 20px;
-      transition: color 0.3s;
+    transition: color 0.3s;
+      font-weight: 600;
     
     
 }
@@ -664,6 +713,7 @@
    background-color: white;
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
+    font-weight: 600;
     
 }
 
@@ -939,6 +989,10 @@ footer {
 
   /* Make From/To stack vertically on small screens */
 @media (max-width: 767.98px) {
+
+  .social-icons {
+    display: none;
+  }
   .destination-container, .departure-wrapper {
     flex-direction: column !important;
     align-items: stretch !important;
@@ -992,4 +1046,138 @@ footer {
       flex: none;
       width: 100%;
     }
+    .navbar-collapse.collapse.show {
+      background-color: #004080; /* your color */
+      width: 100vw; /* viewport width to cover full screen */
+      padding: 0;
+      margin: 0;
+      position: absolute; /* to break out of navbar flex layout */
+      top: 50px; /* below navbar height */
+      left: 0;
+      right: 0;
+      z-index: 9999; /* on top */
+    }
+
+#login-page {
+    position: relative;
+    height: 100vh;
+    background-image: url('../assets/images/section-image-1.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .login-form {
+    padding: 1.5rem;
+    max-width: 320px;
+  }
+
+   .login-form h2 {
+    font-size: 22px;
+   }
+
+  .login-form hr {
+  color: var(--secondary-text);
+ }
+
+
+ .google-sign {
+    border: 1px solid var(--secondary-color);
+    padding: 0.5px;
+    font-size: 14px;
+ }
+
+.or-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0;
+}
+
+
+.login-input-group {
+  margin-bottom: 0.5rem;
+}
+
+.login-input-group input {
+  padding: 0.3rem;
+}
+
+
+.login-input {
+    padding: 1px;
+}
+
+
+.login-button .btn-login{
+    color: white;
+    font-size: 14px;
+    
+}
+
+.forgot-password {
+    font-size: 14px;
+
+}
+
+.sign-up-text {
+  font-size: 14px;
+}
+
+.login-icons {
+  height: 22px;
+  width: 22px;
+}
+
+.login-input-group label {
+  font-size: 14px;
+}
+
+#password::placeholder, #email::placeholder, #firstname::placeholder, #lastname::placeholder {
+  font-size: 14px;        
+}
+ .sign-in-google {
+  font-size: 14px;
+ }
+
+
+
+
+
+  .registration-form {
+    padding: 1.5rem;
+    max-width: 320px;
+    margin-top: 70px;
+  }
+
+   .registration-form h2 {
+    color: var(--primary-color);
+    font-size: 22px;
+   }
+
+.password-requirement span {
+  font-size: 14px;
+}
+.password-requirement ul li {
+  font-size: 12px;
+}
+
+.terms-and-conditions label {
+  font-size: 11px;
+}
+
+.register-input-group {
+  margin-bottom: 0.5rem;
+}
+
+
+.register-input-group label {
+  font-size: 14px;
+}
+
+
+.register-button .btn-register{
+    font-size: 14px;
+     
+}
+
 }
