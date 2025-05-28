@@ -1,0 +1,328 @@
+:root {
+  --primary-color: #1b4a77;
+  --secondary-color: #2f73b5;
+  --primary-text: #696969;
+  --secondary-text: #808080;
+
+  --button-bg: var(--secondary-color);
+  --button-hover-bg: #235a8c;
+  --card-bg: #f9faff;
+  --card-border: #d1d9e6;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+.custom-snackbar {
+  justify-content: center !important;
+  text-align: center;
+}
+
+.navbar-brand h1 {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.navbar.custom-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: transparent !important;
+  height: 70px;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: white !important;
+}
+
+.navbar .nav-link:hover {
+  text-decoration: underline;
+  color: #f0f0f0 !important;
+}
+
+.custom-navbar .nav-link {
+  color: #fff;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.custom-navbar .register-link {
+  font-weight: bold;
+  color: #ffc107; /* Highlight register */
+}
+
+.navbar-toggler {
+  outline: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.collapsing {
+  transition: none !important;
+  display: none !important;
+}
+
+/* Popular Destinations - Domestic */
+
+#main-section {
+  margin-top: 120px;
+}
+#destinations {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+#destinations button {
+  border: none;
+  background-color: var(--primary-color);
+  border-radius: 17px;
+  color: white;
+  padding: 7px 20px;
+  transition: 0.3s ease;
+}
+
+#destinations button:hover {
+  border: 1px solid var(--primary-color);
+  background-color: white;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+#destinations h2,
+#destinations h4 {
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.destinations-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.destination-card {
+  position: relative;
+  flex: 1 1 calc(33.333% - 13.33px); /* roughly 3 cards per row with gap */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.destination-name {
+  position: absolute;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: white;
+  bottom: 10px;
+  left: 12px;
+}
+
+/* Blogs section */
+#blogs {
+  padding: 0 15px;
+}
+
+#blogs .header {
+  color: var(--primary-text);
+}
+
+#blogs .header span {
+  color: #22c3a6;
+}
+
+.view-all {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.view-all:hover {
+  color: var(--secondary-color);
+}
+
+.blog-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog-card {
+  flex: 1 1 calc(33.333% - 13.33px);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-content p {
+  color: var(--secondary-text);
+  font-size: 12px;
+}
+
+.blog-card h5 {
+  color: var(--primary-text);
+  font-size: 16px;
+}
+
+.blog-card h5 span {
+  color: var(--primary-text);
+  color: #22c3a6;
+}
+
+/* REVIEW SECTION */
+
+#reviews {
+  padding: 0 15px;
+}
+
+.review-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.review-card {
+  flex: 1 1 calc(33.333% - 13.33px);
+  background: transparent;
+  padding: 10px;
+  min-height: 250px;
+}
+
+.review-title {
+  color: var(--primary-color);
+}
+
+.review-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.review-card .review-name {
+  font-size: 16px;
+  color: var(--primary-text);
+}
+
+.review-card .location {
+  font-size: 0.875rem;
+  color: var(--secondary-text);
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.review-card .review-text {
+  color: var(--primary-text);
+  font-size: 14px;
+}
+.review-card .read-more {
+  color: #605dec;
+}
+
+.stars {
+  color: #605dec;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+#reviews .show-more-reviews {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  border: 1px solid var(--primary-color);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  padding: 5px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+#reviews .show-more-reviews:hover {
+  border-color: var(--secondary-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  background-color: var(--primary-color);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+@media (max-width: 991px) {
+  /* NavBar */
+  .navbar-collapse.collapse.show {
+    background-color: #004080; /* your color */
+    width: 100vw; /* viewport width to cover full screen */
+    padding: 0;
+    margin: 0;
+    position: absolute; /* to break out of navbar flex layout */
+    top: 50px; /* below navbar height */
+    left: 0;
+    right: 0;
+    z-index: 9999; /* on top */
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* Blogs Mobile Screen */
+  .blog-cards {
+    flex-direction: column;
+  }
+
+  .blog-card {
+    flex: none;
+    width: 100%;
+  }
+}

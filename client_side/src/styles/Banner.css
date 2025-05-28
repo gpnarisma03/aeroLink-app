@@ -1,0 +1,238 @@
+#banner {
+  position: relative;
+  height: 650px;
+  background-image: url("/public/images/section-image-1.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  z-index: 1;
+}
+
+#banner h1 {
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#banner-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+#banner h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+#banner p {
+  font-size: 1.25rem;
+}
+
+.social-icons {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 2;
+}
+
+.social-icons button {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ddd;
+}
+
+/* Flight Search */
+
+.flight-search {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  z-index: 1;
+}
+.flight-icon-container {
+  background-color: var(--primary-color);
+  padding: 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.flight-icon {
+  height: 24px;
+}
+
+select {
+  border: none !important;
+}
+
+.departure-input {
+  border: none !important;
+  box-shadow: none !important;
+}
+.no-style-group-text {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important; /* Optional: remove extra padding */
+}
+
+.destination-container {
+  position: relative;
+  border-radius: 2px;
+}
+.destination-select {
+  background: url("/public/images/icons/location-icon.png") no-repeat left 20px
+    center;
+  background-size: 20px;
+  padding-left: 50px;
+  padding-top: 10px; /* adjust as needed */
+  padding-bottom: 10px; /* adjust as needed */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none; /* remove browser default arrow (optional) */
+  background-position: 20px center;
+}
+
+.from-container,
+.to-container,
+.departure-container {
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  height: 80px;
+  width: 100%;
+}
+
+.destination-container label {
+  color: var(--primary-text);
+}
+
+.destination-select {
+  color: var(--secondary-text) !important;
+}
+.exchange-icon {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 1px solid #c7c7c7;
+  z-index: 1000;
+  background-color: white;
+  position: absolute;
+  top: 40%;
+  right: 47.5%;
+}
+.exchange-icon img {
+  height: 24px;
+}
+/* Remove border and shadow from date input */
+#depart,
+#return {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent; /* keep background clean */
+  color: var(--secondary-text);
+}
+
+#depart::placeholder,
+#return::placeholder {
+  color: var(--secondary-text);
+  opacity: 1;
+}
+
+.departure-container .form-label {
+  color: var(--primary-text);
+}
+
+.flight-search .search-button {
+  background-color: var(--primary-color);
+  color: white;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.flight-search .search-button:hover {
+  background-color: darken(var(--primary-color), 10%);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+@media (max-width: 767.98px) {
+  .flight-search {
+    max-width: 330px;
+  }
+  .flight-icon-container {
+    padding: 3px;
+  }
+
+  .flight-icon {
+    height: 20px;
+  }
+
+  .destination-select {
+    background-size: 18px;
+  }
+
+  .social-icons {
+    display: none;
+  }
+  .destination-container,
+  .departure-wrapper {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 5px;
+  }
+
+  .destination-container .from-container,
+  .destination-container .to-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .departure-wrapper {
+    flex-wrap: wrap; /* allow wrapping on small screens */
+    gap: 1rem; /* optional spacing between containers */
+  }
+
+  .departure-wrapper .departure-container {
+    width: 100%;
+  }
+
+  .destinations-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .destination-card {
+    flex: none;
+    width: 100%;
+  }
+
+  .flight-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .flight-card .text-center {
+    min-width: auto;
+    margin: 8px 0;
+  }
+  .price {
+    text-align: left;
+    margin: 8px 0;
+  }
+  .flight-card .btn-primary {
+    width: 100%;
+  }
+}
